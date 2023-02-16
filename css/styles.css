@@ -85,8 +85,18 @@ p{
 
 /* Header */
 
+.header-position{
+    height: 72px;
+    position: relative;
+    overflow: hidden;
+}
 .header{
-    background-color: var(--color-white); 
+    background-color: var(--color-white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
 }
 .header-border{
     border-bottom: 1px solid #E7E9FC;
@@ -140,9 +150,9 @@ p{
     display: block;
     width: 100%;
     height: 4px;
+    bottom: -1px;
     border-radius: 2px;
     background-color: var(--color-ocean);
-    bottom: 0;
 }
 
 /* Header Contact Links */
@@ -210,12 +220,14 @@ p{
     margin: 0 auto;
     display: block;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition: background-color var(--tarns);
+    transition: background-color var(--tarns),
+    box-shadow var(--tarns), border var(--tarns); 
 }
 .button:hover,
 .button:focus,
 .button:active{
     background-color: var(--color-ocean);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Startegy section */
@@ -522,10 +534,17 @@ p{
 }
 .footer-container{
     display: flex;
- }
+    flex-wrap: wrap;
+    row-gap: 60px;
+    justify-content: center;
+}
+
+/* Left Container */
+
 .left-container{
     max-width: 264PX;
     margin-right: 120px;
+    padding: 0;
 }
 .footer-link {
     font-family: 'Raleway';
@@ -549,8 +568,13 @@ p{
     max-width: 264px;
     margin-top: 16px;
 }
-.right-container{
+
+/* Center Container */
+
+.center-container{
     width: 208px;
+    margin-right: 80px;
+    padding: 0;
 }
 .social-media {
     font-size: 16px;
@@ -558,7 +582,6 @@ p{
     color: var(--color-white);
     margin-bottom: 16px;
 }
-
 .footer-social-list{
     display: flex;
     align-items: baseline;
@@ -583,6 +606,80 @@ p{
 .footer-socials-link:focus{
     background-color: var(--color-green);
 }
+
+/* Right Container */
+
+.right-container{
+   width: 454px;
+   margin: 0;
+   padding: 0;
+}
+.footer-form{
+    display: flex;
+    align-items: row;
+}
+.label{
+    margin-right: 24px; 
+}
+.subscribe-text{
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    margin-bottom: 16px;
+    color: var(--color-white);
+}
+.footer-form-field{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    width: 264px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(24 / 12);
+    letter-spacing: 0.04em;
+    background-color: var(--color-navy-blue);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: border var(--tarns);
+}
+.footer-btn{
+    padding: 8px 24px;
+    margin: 0;
+    gap: 16px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--color-iris);
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    transition: background-color var(--tarns),
+    border var(--tarns); 
+}
+.footer-btn-icon{
+    fill: var(--color-white);
+}
+
+.footer-form-field:hover,
+.footer-form-field:focus{
+    border: 1px solid #4D5AE5;
+    outline: none;
+}
+.footer-btn:hover,
+.footer-btn:focus,
+.footer-btn:active{
+    background-color: var(--color-ocean);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
 
 /* Modal Window */
 
@@ -638,4 +735,116 @@ p{
 .modal-btn:active{
     background-color: var(--color-ocean);
     fill: var(--color-white);
+}
+
+/* Modal Form */
+
+.modal-titel{
+    font-size: 16px;
+    line-height: calc( 24 / 16);
+    text-align: center;
+    margin-top: 72px;
+    margin-bottom: 14px;
+}
+.name-form-label{
+    line-height: calc(16 / 12);
+    letter-spacing: 0.04em;    
+}
+.modal-form-label{
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+    color: var(--color-light-slate);
+}
+.modal-form-group{
+    position: relative;
+    display: flex;
+    margin-bottom: 8px;
+    margin-left: 24px;
+    margin-right: 24px;
+    min-width: 360px;
+}
+.modal-form-field{
+    display: flex;
+    width: 100%;
+    padding-left: 38px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: var(--color-navy-blue-modal);
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(24 / 12);
+    letter-spacing: 0.04em;
+    background-color: var(--color-white);
+    border: 1px Solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border var(--tarns);
+}
+.modal-form-icon{
+    position: absolute;
+    margin-left: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.modal-form-comment{
+    width: 360px;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    resize: none;
+    border: 1px Solid rgba(33, 33, 33, 0.2);
+    font-family: inherit;
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    letter-spacing: 0.04em;
+}
+.modal-form-agreement{
+    margin-left: 24px;
+    margin-right: auto;
+    margin-bottom: 24px;
+
+}
+.modal-form-checkbox{
+    margin-right: 8px;
+}
+
+.modal-form-desc{
+    font-family: inherit;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    letter-spacing: 0.04em;
+    color: rgba(117, 117, 117, 1);
+}
+.modal-form-link{    
+    color: var(--color-iris);
+    text-decoration: underline;
+}
+.modal-form-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 24px 120px;
+    padding: 16px 32px;
+    width: 170px;
+    cursor: pointer;
+    background-color: var(--color-iris);
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    transition: background-color var(--tarns),
+    border var(--tarns); 
 }
