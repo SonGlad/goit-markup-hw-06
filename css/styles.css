@@ -774,7 +774,6 @@ p{
     min-width: 360px;
 }
 
-
 .modal-form-field{
     display: flex;
     width: 100%;
@@ -813,6 +812,8 @@ p{
     fill: var(--color-iris);
 }
 
+/* Comment */
+
 .modal-form-comment{
     width: 360px;
     margin-left: 24px;
@@ -833,6 +834,8 @@ p{
     outline: none;
 }
 
+/* Agreement */
+
 .modal-form-agreement{
     margin-left: 24px;
     margin-right: auto;
@@ -842,7 +845,11 @@ p{
 .modal-form-checkbox{
     margin-right: 8px;
 }
-
+.checkbox-icon-before{
+    fill: var(--color-white);
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+}
 .modal-form-desc{
     font-family: inherit;
     font-size: 12px;
@@ -854,6 +861,9 @@ p{
     color: var(--color-iris);
     text-decoration: underline;
 }
+
+/* Button */
+
 .modal-form-btn{
     display: flex;
     align-items: center;
