@@ -536,7 +536,7 @@ p{
     display: flex;
     flex-wrap: wrap;
     row-gap: 60px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 /* Left Container */
@@ -731,6 +731,8 @@ p{
     border-radius: 50%;
     background-color: var(--color-cornflower);
     cursor: pointer;
+    transition: background-color var(--tarns),
+    fill var(--tarns);
 }
 .modal-btn:active{
     background-color: var(--color-ocean);
@@ -746,6 +748,7 @@ p{
     margin-top: 72px;
     margin-bottom: 14px;
 }
+
 .name-form-label{
     line-height: calc(16 / 12);
     letter-spacing: 0.04em;    
@@ -764,11 +767,14 @@ p{
 .modal-form-group{
     position: relative;
     display: flex;
+    padding: 0;
     margin-bottom: 8px;
     margin-left: 24px;
     margin-right: 24px;
     min-width: 360px;
 }
+
+
 .modal-form-field{
     display: flex;
     width: 100%;
@@ -786,12 +792,30 @@ p{
     border-radius: 4px;
     transition: border var(--tarns);
 }
+
+.modal-form-field:hover,
+.modal-form-field:focus,
+.modal-form-field:active{
+    border: 1px Solid var(--color-iris);
+    outline: none;
+}
+
+.modal-form-group:hover .modal-form-icon, 
+.modal-form-group:focus .modal-form-icon,
+.modal-form-group:active .modal-form-icon{
+    fill: var(--color-iris);
+}
+
+
 .modal-form-icon{
     position: absolute;
-    margin-left: 16px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    left: 5%;
+    top: 23%;
+    fill: var(--color-navy-blue-modal);
+    transition: fill var(--tarns);
+    transform: translateY(0%);  
 }
+
 .modal-form-comment{
     width: 360px;
     margin-left: 24px;
@@ -845,6 +869,12 @@ p{
     color: var(--color-white);
     border: none;
     border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     transition: background-color var(--tarns),
     border var(--tarns); 
+}
+.modal-form-btn:hover,
+.modal-form-btn:focus,
+.modal-form-btn:active{
+    background-color: var(--color-ocean);
 }
