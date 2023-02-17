@@ -837,19 +837,46 @@ p{
 /* Agreement */
 
 .modal-form-agreement{
+    margin: 0;
+    padding: 0;
+}
+.checkbox-form-group{
     margin-left: 24px;
     margin-right: auto;
     margin-bottom: 24px;
-
+    position: relative;
+    display: flex;
+    align-items: center;
 }
+
 .modal-form-checkbox{
+    margin-right: 11px;
+    /* visibility: hidden; */
+}
+.checkbox-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin-right: 8px;
+ 
 }
 .checkbox-icon-before{
     fill: var(--color-white);
     border: 1.25px solid #2E2F42;
     border-radius: 2px;
+    opacity: 1;
 }
+
+.checkbox-icon-after{
+    opacity: 0;
+} 
+/* .checkbox-form-group:active .checkbox-icon-after{
+    opacity: 1;
+} */
+.modal-form-checkbox:checked + .checkbox-icon-before{
+    opacity: 0;
+}
+
 .modal-form-desc{
     font-family: inherit;
     font-size: 12px;
