@@ -792,7 +792,6 @@ p{
     border-radius: 4px;
     transition: border var(--tarns);
 }
-
 .modal-form-field:hover,
 .modal-form-field:focus,
 .modal-form-field:active{
@@ -800,20 +799,18 @@ p{
     outline: none;
 }
 
-.modal-form-group:hover .modal-form-icon, 
-.modal-form-group:focus .modal-form-icon,
-.modal-form-group:active .modal-form-icon{
-    fill: var(--color-iris);
-}
-
-
 .modal-form-icon{
     position: absolute;
     left: 5%;
     top: 23%;
     fill: var(--color-navy-blue-modal);
     transition: fill var(--tarns);
-    transform: translateY(0%);  
+}
+.modal-form-group:hover .modal-form-icon{
+    fill: var(--color-iris);
+}
+.modal-form-group:focus-within .modal-form-icon{
+    fill: var(--color-iris);
 }
 
 .modal-form-comment{
@@ -830,6 +827,12 @@ p{
     line-height: calc(16 / 12);
     letter-spacing: 0.04em;
 }
+.modal-form-checkbox:hover,
+.modal-form-checkbox:focus{
+    border: 1px Solid var(--color-iris);
+    outline: none;
+}
+
 .modal-form-agreement{
     margin-left: 24px;
     margin-right: auto;
