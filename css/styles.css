@@ -5,6 +5,7 @@ body{
     font-weight: 500;
     letter-spacing: 0.02em;
     color: var(--color-navy-blue);
+    padding-top: 72px;
 }
 :root {
 	--color-iris: #4d5ae5;
@@ -85,11 +86,6 @@ p{
 
 /* Header */
 
-.header-position{
-    height: 72px;
-    position: relative;
-    visibility: hidden;
-}
 .header{
     background-color: var(--color-white);
     position: fixed;
