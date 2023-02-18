@@ -612,7 +612,7 @@ p{
 }
 .footer-form{
     display: flex;
-    align-items: row;
+    align-items: end;
 }
 .label{
     margin-right: 24px; 
@@ -626,6 +626,7 @@ p{
 .footer-form-field{
     padding: 8px 16px;
     width: 264px;
+    height: 40px;
     background-color: var(--color-navy-blue);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
