@@ -869,7 +869,7 @@ p{
 .modal-form-checkbox:focus + .custom-checkbox{
     outline: 2px solid #404bbf;
     border-radius: 2px;
-    outline-offset: -1px; 
+    outline-offset: -2px; 
 }
 
 .modal-form-checkbox:checked + .custom-checkbox > .custom-checkbox-before{
