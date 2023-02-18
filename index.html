@@ -404,12 +404,12 @@
                     <use href="./icons/icons.svg#icon-close"></use>
                 </svg>
             </button>
-            <p class="modal-titel"><strong>Leave your contacts and we will call you back</strong></p>
+            <strong class="modal-titel">Leave your contacts and we will call you back</strong>
             <form class="modal-form" name="modal-form">
 
                 <!-- User Name -->
 
-                <label class="name-form-label modal-form-label" for="user_name">Name</label>
+                <label class="modal-form-label name-form-label" for="user_name">Name</label>
                     <div class="modal-form-group">
                         <input class="modal-form-field" type="text" id="user_name" autocomplete="off">
                         <svg class="modal-form-icon" width="18px" height="24px">
@@ -417,7 +417,7 @@
                         </svg>
                     </div>
 
-                    <!-- User Phone -->
+                <!-- User Phone -->
                 
                 <label class="modal-form-label" for="user_phone">Phone</label>
                     <div class="modal-form-group">
@@ -427,7 +427,7 @@
                         </svg>
                     </div>
 
-                    <!-- User E-mail -->
+                <!-- User E-mail -->
 
                 <label class="modal-form-label" for="user_email">Email</label>
                     <div class="modal-form-group">
@@ -457,6 +457,10 @@
                         type="checkbox" 
                         name="user_agreement" 
                         id="user_agreement"/>
+                    <svg class="custom-checkbox" width="16px" height="16px">
+                        <use class="custom-checkbox-before" href="./icons/icons.svg#icon-checkbox"></use>
+                        <use class="custom-checkbox-after" href="./icons/icons.svg#icon-checkboxclick"></use>
+                    </svg>
                     <span class="modal-form-desc">
                         I accept the terms and conditions of the
                         <a class="modal-form-link" href="" target="_blank">Privacy Policy</a>
