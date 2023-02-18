@@ -850,7 +850,7 @@ p{
     position: relative;
 }
 .modal-form-checkbox{
-    visibility: hidden;
+    opacity: 0;
 }
 .custom-checkbox{
     position: absolute;
@@ -859,12 +859,19 @@ p{
 }
 .custom-checkbox-before{
     opacity: 1;
+    fill: var(--color-white);
     transition: opacity var(--tarns);
 }
 .custom-checkbox-after{
     opacity: 0;
     transition: opacity var(--tarns);
 }
+.modal-form-checkbox:focus + .custom-checkbox{
+    outline: 2px solid #404bbf;
+    border-radius: 2px;
+    outline-offset: -1px; 
+}
+
 .modal-form-checkbox:checked + .custom-checkbox > .custom-checkbox-before{
     opacity: 0;
 }
@@ -883,6 +890,9 @@ p{
 .modal-form-link{    
     color: var(--color-iris);
     text-decoration: underline;
+}
+.modal-form-link:focus-within{
+    outline-color: var(--color-iris);
 }
 
 /* Button */
